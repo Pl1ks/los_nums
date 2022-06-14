@@ -1,0 +1,45 @@
+import java.util.Scanner;
+ 
+public class Licz {
+     
+     int haslo;
+     public void Pytanie(){
+         System.out.println("Proszę podać hasło");
+     }
+      
+     public void Hasło(){
+         Scanner h = new Scanner(System.in);
+         haslo = h.nextInt();
+          
+          
+          
+     }
+  public boolean SprawdzenieHasła(){
+          
+        if(haslo==1234){
+            System.out.println("Uało się zalogować");
+            return false;
+        }
+        else{
+            System.out.println("Nie udalo się zalogować podaj porpawne haslo. Spróbuj ponownie");
+            return true;
+              
+        }
+}
+      
+    }
+ 
+ 
+public class Wyniki {
+ 
+    public static void main(String[] args){
+         
+        Licz L = new Licz();
+         
+        boolean b = true;
+ 
+while (b == true) {
+    L.Pytanie();
+    L.Hasło();
+    b = L.SprawdzenieHasła();
+}
